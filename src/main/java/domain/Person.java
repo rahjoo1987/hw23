@@ -24,8 +24,6 @@ public class Person extends BaseEntity {
     @Column(unique = true)
     String userName;
     String password;
-    @Enumerated(value = EnumType.STRING)
-    Gender gender;
     @ManyToMany
     @JoinTable(name = "person-roles" ,joinColumns = {@JoinColumn(name = "person_id")},
             inverseJoinColumns = {@JoinColumn(name = "role-id")})
